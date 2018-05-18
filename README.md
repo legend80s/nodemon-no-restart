@@ -1,6 +1,7 @@
 # nodemon-no-restart
 Minimal codebase for testing an http application not restarting with nodemon@x.x.x and alinode@4.1.0. I install the latest nodemon 1.17.4, but the version doesn't make any difference.
-But it works when replaced with node@10.1.0. To make it happen, you can replace `"install-alinode": "4.1.0"` with `"install-node": "10.1.0"` in package.json.
+
+It works when replaced with node@10.1.0. To make it happen, you can replace `"install-alinode": "4.1.0"` with `"install-node": "10.1.0"` in package.json.
 
 Platform: macOS Sierra version 10.12.0 i386
 
