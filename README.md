@@ -1,6 +1,21 @@
 # nodemon-no-restart
-Minimal codebase for testing an http application not restarting with nodemon@x.x.x and alinode@4.1.0. I install the latest nodemon 1.17.4, but the version doesn't make any difference.
-But it works when replaced with node@10.1.0. To make it happen, you can replace `"install-alinode": "4.1.0"` with `"install-node": "10.1.0"` in package.json.
+[FIXED] nodemon's restarting signal `SIGUSR2` conflicts with alinode's.
+
+Sollution:
+
+nodemon.json
+
+```json
+{
+  "signal": "SIGQUIT"
+}
+```
+
+------
+
+Minimal codebase for testing an http application not restarting with nodemon@x.x.x and alinode@4.1.0. I install the latest nodemon 1.17.4, but the version makes no difference.
+
+It works when replaced with node@10.1.0. To make it happen, you can replace `"install-alinode": "4.1.0"` with `"install-node": "10.1.0"` in package.json.
 
 Platform: macOS Sierra version 10.12.0 i386
 
@@ -19,15 +34,23 @@ Not restart with alinode@4.1.0.
 #### Console
 
 > \> nodemon-no-restart@1.0.0 watch /Users/chuanzong.lcz/Documents/learning/programming/node.js/nodemon-no-restart
+>
 > \> nodemon bin/server.js
 >
 > [nodemon] 1.17.4
+>
 > [nodemon] to restart at any time, enter `rs`
+>
 > [nodemon] watching: *.*
+>
 > [nodemon] starting `node bin/server.js`
+>
 > Server listening on port 6008
+>
 > [nodemon] restarting due to changes...
+>
 > shmget error, please try later.: No such file or directory
+>
 
 As what you see, nodemon failed to restart my App 😕. And the `rs` commad failed to work, too!
 
@@ -48,15 +71,23 @@ It does restart with node@10.1.0.
 #### Console
 
 > \> nodemon-no-restart@1.0.0 watch /Users/chuanzong.lcz/Documents/learning/programming/node.js/nodemon-no-restart
+>
 > \> nodemon bin/server.js
 >
 > [nodemon] 1.17.4
+>
 > [nodemon] to restart at any time, enter `rs`
+>
 > [nodemon] watching: *.*
+>
 > [nodemon] starting `node bin/server.js`
+>
 > Server listening on port 6008
+>
 > [nodemon] restarting due to changes...
+>
 > [nodemon] starting `node bin/server.js`
+>
 > Server listening on port 6008
 
 As what you see, nodemon restart my little App successfully 🎉.
