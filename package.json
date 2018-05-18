@@ -1,0 +1,20 @@
+{
+  "name": "nodemon-no-restart",
+  "version": "1.0.0",
+  "description": "Minimal code base for test a koa@ application not restart with the nodemon@1.17.4 and alinode@4.1.0",
+  "main": "index.js",
+  "dependencies": {
+    "koa": "1.2.0",
+    "nodemon": "1.17.4"
+  },
+  "engines": {
+    "install-node": "10.1.0"
+  },
+  "scripts": {
+    "watch": "nodemon bin/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git@github.com:legend80s/nodemon-no-restart.git",
+  "author": "",
+  "license": "MIT"
+}
