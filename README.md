@@ -1,4 +1,18 @@
 # nodemon-no-restart
+[FIXED] nodemon's restarting signal `SIGUSR2` conflicts with alinode's.
+
+Sollution:
+
+nodemon.json
+
+```json
+{
+  "signal": "SIGQUIT"
+}
+```
+
+------
+
 Minimal codebase for testing an http application not restarting with nodemon@x.x.x and alinode@4.1.0. I install the latest nodemon 1.17.4, but the version makes no difference.
 
 It works when replaced with node@10.1.0. To make it happen, you can replace `"install-alinode": "4.1.0"` with `"install-node": "10.1.0"` in package.json.
