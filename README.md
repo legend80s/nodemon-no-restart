@@ -20,6 +20,7 @@ Not restart with alinode@4.1.0.
 #### Console
 
 > \> nodemon-no-restart@1.0.0 watch /Users/chuanzong.lcz/Documents/learning/programming/node.js/nodemon-no-restart
+>
 > \> nodemon bin/server.js
 >
 > [nodemon] 1.17.4
@@ -49,6 +50,7 @@ It does restart with node@10.1.0.
 #### Console
 
 > \> nodemon-no-restart@1.0.0 watch /Users/chuanzong.lcz/Documents/learning/programming/node.js/nodemon-no-restart
+>
 > \> nodemon bin/server.js
 >
 > [nodemon] 1.17.4
