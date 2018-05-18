@@ -24,12 +24,19 @@ Not restart with alinode@4.1.0.
 > \> nodemon bin/server.js
 >
 > [nodemon] 1.17.4
+>
 > [nodemon] to restart at any time, enter `rs`
+>
 > [nodemon] watching: *.*
+>
 > [nodemon] starting `node bin/server.js`
+>
 > Server listening on port 6008
+>
 > [nodemon] restarting due to changes...
+>
 > shmget error, please try later.: No such file or directory
+>
 
 As what you see, nodemon failed to restart my App 😕. And the `rs` commad failed to work, too!
 
@@ -54,12 +61,19 @@ It does restart with node@10.1.0.
 > \> nodemon bin/server.js
 >
 > [nodemon] 1.17.4
+>
 > [nodemon] to restart at any time, enter `rs`
+>
 > [nodemon] watching: *.*
+>
 > [nodemon] starting `node bin/server.js`
+>
 > Server listening on port 6008
+>
 > [nodemon] restarting due to changes...
+>
 > [nodemon] starting `node bin/server.js`
+>
 > Server listening on port 6008
 
 As what you see, nodemon restart my little App successfully 🎉.
