@@ -2,14 +2,17 @@
 Minimal codebase for testing an http application not restarting with nodemon@x.x.x and alinode@4.1.0. I install the latest nodemon 1.17.4, but the version doesn't make any difference.
 But it works when replaced with node@10.1.0. To make it happen, you can replace `"install-alinode": "4.1.0"` with `"install-node": "10.1.0"` in package.json.
 
+Platform: macOS Sierra version 10.12.0 i386
+
 ## Reproduce
 
 ### Case#1 alinode@4.1.0 not working
 
 Not restart with alinode@4.1.0.
 
-1. "install-alinode": "4.1.0"
-2. tnpm install
+1. rm -rf node_modules # if it exists
+2. "install-alinode": "4.1.0"
+3. tnpm install
 3. npm run watch
 4. modify `res.end('helloworld');` to `res.end('hello world');`
 
@@ -36,10 +39,11 @@ Open http://localhost:6008/ which shows "helloworld". After change, refresh the 
 
 It does restart with node@10.1.0.
 
-1. "install-node": "10.1.0"
-2. tnpm install
-3. npm run watch
-4. modify `res.end('helloworld');` to `res.end('hell world');`
+1. rm -rf node_modules # if it exists
+2. "install-node": "10.1.0"
+3. tnpm install
+4. npm run watch
+5. modify `res.end('helloworld');` to `res.end('hell world');`
 
 #### Console
 

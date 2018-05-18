@@ -10,7 +10,7 @@
     "install-alinode": "4.1.0"
   },
   "scripts": {
-    "watch": "nodemon bin/server.js",
+    "watch": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": "git@github.com:legend80s/nodemon-no-restart.git",
