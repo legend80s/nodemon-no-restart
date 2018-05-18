@@ -1,6 +1,11 @@
-const app = require('../app');
+const http = require('http');
 
-const port = 6008;
-const server = app.listen(port, () => {
+const PORT = 6008;
+
+const server = http.createServer((req, res) => {
+  res.end('helloworld');
+});
+
+server.listen(PORT, '127.0.0.1', () => {
   console.log(`Server listening on port ${server.address().port}`);
 });
